@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html>
+<head><title>ASICS Employee Discount Filter Options</title>
+<style>
+html, body {width: 350px; margin: 0px; padding: 0px}
+body {width: calc(350px - 2em); padding: 1em; padding-bottom: .5em}
+body, input, select, button {font: .8em sans-serif; line-height: 120%}
+input, button, select {display: inline; text-transform: uppercase; padding: .2em; border: 2px solid #cccccc; color: #333333; margin: .5em auto 1em auto}
+button {display: block; margin-top: 1em; margin-bottom: 1em; background: #02c3e6; font-size: 1.1em; color: #282828; font-weight: bold; border: 2px solid #282828; padding: .5em 1em .5em 1em}
+  button:hover {background: #dddddd; cursor: pointer}
+
+#login_status {margin: .5em; color: #cc0000; text-align: center; font-style: italic}
+#status {margin: .5em; text-transform: uppercase; font-weight: bold; text-align: center}
+</style>
+</head>
+<body>
+<div style="color: #999999; padding-bottom: 1em; text-align: center">ASICS.COM Employee Discount Filter</div>
+<div>Employee Discount filter:
+<select id="active">
+<option value="active">Enabled</option>
+<option value="inactive">Disabled</option>
+</select>
+</div>
+
+<!--
+<div>
+Items ineligible for discount:
+<select id="treatment">
+ <option value="fade">Faded Out</option>
+ <option value="hide">Hidden</option>
+</select>
+</div>
+-->
+
+<div id="login_status">You are signed out. Sign in to your OneASICS account to see results filtered by employee discount eligibility.</div>
+
+<div id="status"></div>
+<button id="save">Save</button>
+
+<script src="options.js"></script>
+</body>
+</html>

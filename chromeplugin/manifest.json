@@ -1,0 +1,31 @@
+{
+    "background": {
+    "scripts": ["request.js"]
+    },
+    "content_scripts": [
+    {
+      "matches": ["*://*.asics.com/*"],
+      "run_at": "document_end",
+      "js": ["content.js"]
+    }
+  ],
+    "description": "This will fade out items that are ineligible for the employee discount on asics.com. Intended for internal use only.",
+    "icons": { 
+        "48": "icon48.png",
+       "128": "icon128.png"
+     },
+    "manifest_version": 2,
+    "name": "ASICS Employee Discount Filter",
+    "permissions": [ "tabs", "webRequest", "webRequestBlocking", "storage", "*://*.asics.com/*" ],
+    "version": "0.2.1",
+    "author":"Josh Lipinski",
+    "options_ui": {
+    "page": "options.html",
+    "open_in_tab": false
+  },
+  "browser_action": {
+    "default_title":    "asics.com discount settings",
+    "default_icon":     "icon48.png",
+    "default_popup":    "options.html"
+  }
+}
